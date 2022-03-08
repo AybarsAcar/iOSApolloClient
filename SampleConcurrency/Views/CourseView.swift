@@ -22,6 +22,8 @@ struct CourseView: View {
           presentationMode.wrappedValue.dismiss()
         }) {
           CloseButton()
+            .accessibilityLabel("Back")
+            .accessibilityHint("Go back")
         }
         Spacer()
       }

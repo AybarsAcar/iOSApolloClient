@@ -24,6 +24,7 @@ struct DateTitle: View {
         .font(.largeTitle)
         .bold()
     }
+    .accessibilityAddTraits([.isHeader])
     .onAppear {
       date = Date.now.formatted(.dateTime.weekday(.wide).month().day())
     }
