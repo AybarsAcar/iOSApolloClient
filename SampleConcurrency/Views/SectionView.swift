@@ -14,6 +14,8 @@ struct SectionView: View {
   let course: Course
   let section: SectionsCollection.Section
   
+  @State private var attrString: AttributedString = ""
+  
   var body: some View {
     ZStack(alignment: .top) {
       content
@@ -42,8 +44,16 @@ extension SectionView {
     ScrollView {
       SectionViewCover(course: course, section: section)
       
-      Text(section.content)
+      Text(attrString)
         .padding(16)
+        .padding(.bottom, 100)
+        .onAppear {
+          do {
+            attrString = try AttributedString(markdown: section.content)
+          } catch {
+            print(error)
+          }
+        }
     }
     .ignoresSafeArea()
   }

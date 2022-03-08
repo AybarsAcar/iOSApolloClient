@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DateTitle: View {
   
-  let title: String
+  let title: AttributedString
   
   @State private var date: String = ""
   
