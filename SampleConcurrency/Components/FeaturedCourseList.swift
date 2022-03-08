@@ -22,8 +22,10 @@ struct FeaturedCourseList: View {
         }
         else {
           ForEach(featuredCourses) { item in
+            NavigationLink(destination: CourseView(course: item)) {
               FeaturedCourseCard(course: item)
                 .frame(width: 252, height: 350)
+            }
           }
         }
         

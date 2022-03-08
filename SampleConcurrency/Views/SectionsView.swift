@@ -32,6 +32,7 @@ struct SectionsView: View {
         }
       }
       .navigationTitle("All Sections")
+      .padding(.bottom, 100)
     }
 }
 

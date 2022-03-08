@@ -50,6 +50,7 @@ struct HomeView: View {
         .ignoresSafeArea()
         .frame(height: 0)
     }
+    .navigationBarHidden(true)
   }
 }
 

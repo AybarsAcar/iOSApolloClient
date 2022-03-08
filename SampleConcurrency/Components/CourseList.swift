@@ -24,7 +24,9 @@ struct CourseList: View {
       }
       else {
         ForEach(courses) { item in
-          CourseCard(course: item)
+          NavigationLink(destination: CourseView(course: item)) {
+            CourseCard(course: item)
+          }
         }
       }
     }
